@@ -7,8 +7,5 @@ public class Calc {
 		int total = CalcLogic.tasu(a, b);
 		int delta = CalcLogic.hiku(a, b);
 		System.out.println("たすと" + total + "、ひくと" + delta);
-
-
-
 	}
 }
