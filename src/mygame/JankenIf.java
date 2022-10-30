@@ -11,6 +11,9 @@ public class JankenIf {
 		
 		// コンピューターの手を乱数で作成する
 		int pc = getPc();
+		
+		// 勝敗の判定を行う
+		String result = judgeJanken(user, pc);
 
 	}
 	public static int getUser() {
@@ -48,6 +51,22 @@ public class JankenIf {
 		Random rand = new Random();
 		// 0, 1, 2のどれかを求め、メソッドの結果として返す
 		return rand.nextInt(3);
+	}
+	
+	public static String judgeJanken(int user, int pc) {
+		// 判定結果を保存する
+		String result = "";
+		
+		if((user == 0 && pc == 1) || (user == 1 && pc == 2) || (user == 2 && pc == 0)) {
+			result = "勝ち";
+		} else if ((user == 0 && pc == 2) || (user == 1 && pc == 0) || (user == 2 && pc == 1)) {
+			result = "負け";
+		} else {
+			result = "あいこ";
+		}
+		
+		// 勝敗結果を返す
+		return result;
 	}
 	
 	
