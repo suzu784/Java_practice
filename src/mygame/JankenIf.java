@@ -14,6 +14,9 @@ public class JankenIf {
 		
 		// 勝敗の判定を行う
 		String result = judgeJanken(user, pc);
+		
+		// 結果を表示する
+		showResult(user, pc, result);
 
 	}
 	public static int getUser() {
@@ -67,6 +70,14 @@ public class JankenIf {
 		
 		// 勝敗結果を返す
 		return result;
+	}
+	
+	public static void showResult(int user, int pc, String result) {
+		// じゃんけんの手を配列で定義
+		String[] janken = {"グー", "チョキ", "パー"};
+		// 結果の表示
+		System.out.println("あなたの手は:" + janken[user] + ", コンピューターの手は:" + janken[pc]);
+		System.out.println("結果:" + result);
 	}
 	
 	
