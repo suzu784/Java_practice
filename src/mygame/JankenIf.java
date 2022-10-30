@@ -1,5 +1,6 @@
 package mygame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class JankenIf {
@@ -7,6 +8,9 @@ public class JankenIf {
 	public static void main(String[] args) {
 		// ユーザーの手をキーボードから入力してもらう
 		int user = getUser();
+		
+		// コンピューターの手を乱数で作成する
+		int pc = getPc();
 
 	}
 	public static int getUser() {
@@ -38,5 +42,14 @@ public class JankenIf {
 			}
 		}
 	}
+	
+	public static int getPc() {
+		// 乱数の準備
+		Random rand = new Random();
+		// 0, 1, 2のどれかを求め、メソッドの結果として返す
+		return rand.nextInt(3);
+	}
+	
+	
 
 }
