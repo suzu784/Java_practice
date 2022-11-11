@@ -10,8 +10,8 @@ public class C114 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("数字を入力してください");
         int line = sc.nextInt();
-        
-        for(int i = 1; i < line; i++) {
+                
+        for(int i = 0; i < line; i++) {
             Scanner scn = new Scanner(System.in);
             String a = scn.nextLine();
             String b = scn.nextLine();
@@ -19,12 +19,13 @@ public class C114 {
             String bFirst = b.substring(0, 1);
             
             if(!aLast.equals(bFirst)) {
-                System.out.print(aLast);
-                System.out.print(" ");
-                System.out.print(bFirst);
-                break;
+            	System.out.print(aLast);
+            	System.out.print(" ");
+            	System.out.print(bFirst);
+            	System.exit(0);
             }
         }
+        System.out.println("Yes");
 	}
 
 }
