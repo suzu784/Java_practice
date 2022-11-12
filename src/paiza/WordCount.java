@@ -16,7 +16,7 @@ public class WordCount {
 		String target = sc.nextLine();
 		String str = sc.nextLine();
 		
-		// 文を1文字ずつlist煮詰める
+		// 文を1文字ずつlistに詰める
 		for(int i = 1; i < str.length() + 1; i++) {
 			list.add(str.substring(i - 1, i));
 		}
