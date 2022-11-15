@@ -25,7 +25,6 @@ public class AverageInterval2 {
 		
 		for(int i = k; i <= n; i++) {
 			int visitor = sum[i] - sum[i - k];
-			System.out.println(visitor);
 			if(visitor > maxVisitor) {
 				maxVisitor = visitor;
 				dayCandidates = 1;
@@ -35,8 +34,6 @@ public class AverageInterval2 {
 			}
 		}
 		
-		System.out.println(dayCandidates + " " + dayFrom);
-
 	}
 
 }
