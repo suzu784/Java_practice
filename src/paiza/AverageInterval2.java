@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class AverageInterval2 {
 	
+	// 配列のインデックス番号の範囲外にアクセスできない
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("日別訪問者数の最大平均区間は？");
@@ -15,12 +17,11 @@ public class AverageInterval2 {
 		for(int i = 1; i <= n; i++) {
 			sum[i] = sc.nextInt();
 			sum[i] += sum[i - 1];
-			System.out.println(sum[i]);
 		}
 		
-		int maxVisitor = 0;
-		int dayFrom = 0;
-		int dayCandidates = 0;
+		int maxVisitor = 0; // 最大訪問者数
+		int dayFrom = 0; // 候補のなかで最も早い候補日
+		int dayCandidates = 0; // キャンペーンを行なった期間の候補数
 		
 		for(int i = k; i <= n; i++) {
 			int visitor = sum[i] - sum[i - k];
