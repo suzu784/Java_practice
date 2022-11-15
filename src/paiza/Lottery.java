@@ -6,6 +6,7 @@ public class Lottery {
 	
 	// Mathクラスのabsメソッドを使用すると、絶対値を取得することができる
 	// 当選番号と宝くじの番号の下四桁が一致しているかどうかは、両者を10000で割った余りを比較する
+	// 誤差1を作るためにMath.absメソッドを使用
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
