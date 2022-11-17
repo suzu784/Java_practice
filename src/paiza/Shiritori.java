@@ -21,11 +21,13 @@ public class Shiritori {
 			words.add(sc.next());
 		}
 		
+		// 生き残り者数
 		boolean[] alive = new boolean[n];
 		Arrays.fill(alive, true);
 		
 		String bef = "";
 		int player = 0;
+		// m回分しりとりを続ける
 		for(int i = 0; i < m; i++) {
 			while(!alive[player]) {
 				player = (player + 1) % n;
@@ -33,14 +35,15 @@ public class Shiritori {
 			
 			// しりとりのルール
 			String s = sc.next();
-			boolean violateRule13 = !words.contains(s);
-			boolean violateRule2 =
+			boolean violateRule13 = !words.contains(s); // ルール1
+			boolean violateRule2 = // ルール2
 				bef != "" && bef.charAt(bef.length() -1) != s.charAt(0);
-			boolean violateRule4 = s.charAt(s.length() - 1) == 'z';
+			boolean violateRule4 = s.charAt(s.length() - 1) == 'z'; // ルール4
+			// ルールを破った場合
 			if(violateRule13 || violateRule2 || violateRule4) {
 				alive[player] = false;
 				bef = "";
-			} else {
+			} else { // ルールを守った場合
 				words.remove(s);
 				bef = s;
 			}
