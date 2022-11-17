@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class UniqueValue {
 	
-	// 5回分必ずループを繰り返すため、、whileを使う
+	// 5回分必ずループを繰り返すための判断としてwhileを使う
 	// カウントと判定用の変数を用意する
 	// 配列内に値がない場合は重複チェックしない
 
