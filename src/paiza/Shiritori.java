@@ -10,6 +10,7 @@ public class Shiritori {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("しりとりを始めます");
 		
 		int n = sc.nextInt();
 		int k = sc.nextInt();
@@ -30,6 +31,7 @@ public class Shiritori {
 				player = (player + 1) % n;
 			}
 			
+			// しりとりのルール
 			String s = sc.next();
 			boolean violateRule13 = !words.contains(s);
 			boolean violateRule2 =
@@ -47,6 +49,13 @@ public class Shiritori {
 		}
 		
 		int aliveCount = 0;
+		for(int i = 0; i < n; i++) {
+			if(alive[i]) {
+				aliveCount++;
+			}
+		}
+		
+		System.out.println(aliveCount);
 		for(int i = 0; i < n; i++) {
 			if(alive[i]) {
 				System.out.println(i + 1);
