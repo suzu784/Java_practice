@@ -27,12 +27,12 @@ public class Shiritori {
 		
 		String bef = "";
 		int player = 0;
+		
 		// m回分しりとりを続ける
 		for(int i = 0; i < m; i++) {
 			while(!alive[player]) {
 				player = (player + 1) % n;
 			}
-			
 			// しりとりのルール
 			String s = sc.next();
 			boolean violateRule13 = !words.contains(s); // ルール1
@@ -47,7 +47,6 @@ public class Shiritori {
 				words.remove(s);
 				bef = s;
 			}
-			
 			player = (player + 1) % n;
 		}
 		
