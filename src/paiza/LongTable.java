@@ -7,6 +7,7 @@ public class LongTable {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println();
 		
 		int n = sc.nextInt();
 		int m = sc.nextInt();
