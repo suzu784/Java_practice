@@ -1,6 +1,8 @@
 package algorithm2;
 
 public class PrimeNumber1 {
+	
+	// breakされていれば素数ではない
 
 	public static void main(String[] args) {
 		int counter = 0;
