@@ -1,6 +1,8 @@
 package algorithm2;
 
 public class PrimeNumber2 {
+	
+	// nが素数であるかどうかの判定は、そこまでに蓄えられた素数で除算を行う
 
 	public static void main(String[] args) {
 		int counter = 0;
