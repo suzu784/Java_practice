@@ -20,7 +20,7 @@ public class BinSearch {
 			do {
 				System.out.print("x[" + i + "] :");
 				x[i] = sc.nextInt();
-			} while(x[i] < x[i - 1]);
+			} while(x[i] < x[i - 1]); // 判断文do whileを入れており、0番目のインデックスはループに含めない
 		}
 		
 		System.out.print("探す値");
